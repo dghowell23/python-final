@@ -1,4 +1,5 @@
 import math
+outfile = open('numbers.txt', 'w')
 another = 'y'
 while another == 'y' or another == 'Y':
     number = float(input('Enter a number to be calculated: '))
@@ -9,8 +10,7 @@ while another == 'y' or another == 'Y':
     another = input('Would you like to calculate another number?' + \
                     '(Enter y for yes):')
 if another == 'y' or another == 'Y':
-    outfile = open('numbers.txt', 'w')
-    outfile.write(str('sqrt\n',  'powr\n'))
+    outfile.write(sqrt,  powr)
     outfile.close()
 else:
     infile = open('numbers.txt', 'r')
