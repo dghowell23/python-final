@@ -9,7 +9,6 @@ while another == 'y' or another == 'Y':
     score = float(input('Enter the score for a test: '))
     #add that test score to the total value for test scores
     total += score
-    print(format(total, '.2f'))
     #ask the user if they have another score to add in
     another = input('Would you like to add another score? ' + \
                     '(Enter y or Y for yes):')
@@ -17,5 +16,6 @@ while another == 'y' or another == 'Y':
     if another == 'y' or another == 'Y':
         count = count + 1
     else:
+        print('The total of the scores is: ', format(total, '.2f'))
         print('The actual average of your scores is: ', format((total / count), '.2f'))
         print('The average of your scores(rounded up) is: ', (math.ceil(total / count)))
