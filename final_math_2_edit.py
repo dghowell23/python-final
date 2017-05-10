@@ -9,12 +9,14 @@ while another == 'y' or another == 'Y':
     print('Your number raised to the power of 3 is: ', powr)
     another = input('Would you like to calculate another number?' + \
                     '(Enter y for yes):')
-if another == 'y' or another == 'Y':
+    outfile.write('The square root is: ')
+    outfile.write(str(sqrt + '\n'))
+    outfile.write('The number raised to the power of 3 is: ')
+    outfile.write(str(powr + '\n'))
+    outfile.close()
+while another != 'y' or another != 'Y':
     infile = open('numbers.txt', 'r')
     contents = infile.read()
     infile.close()
+    print('Here is what you have entered: ')
     print(contents)
-else:
-    outfile.write(str('The square root is: ', 'sqrt\n' + \
-                      'and the number raised to the power of 3 is: ' 'powr\n'))
-    outfile.close()
